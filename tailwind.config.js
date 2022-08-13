@@ -8,7 +8,28 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Work Sans", "sans-serif"],
+        fancy: ["Paytone One", "sans-serif"],
+      },
+      colors: {
+        theme: {
+          primary: "#e1364a",
+          primaryVariant: "#b90e22",
+          // secondary: "#",
+          // secondaryVariant: "#",
+          background: "#151613",
+          surface: "#2b2b27",
+          // error: "",
+          onPrimary: "#f5f5f5",
+          // onSecondary: "#",
+          onBackground: "#f5f5f5",
+          onSurface: "#f5f5f5",
+          // onError: ""
+        }
+      }
+    },
   },
   plugins: [],
 }
