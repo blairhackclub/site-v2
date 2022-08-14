@@ -2,14 +2,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -20px;
+  margin-left: -1.25rem;
   width: auto;
 }
 .masonry-column {
-  padding-left: 20px;
+  padding-left: 1.25rem;
   background-clip: padding-box;
 }
 .masonry-column > div {
-  margin-bottom: 20px;
-  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  border-radius: 0.75rem;
 }

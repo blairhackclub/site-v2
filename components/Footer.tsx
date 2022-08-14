@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -6,7 +7,11 @@ export default function Footer() {
       <p className="text-sm">
         © 2021-2022 Blair Hack Club.
       </p>
-      <img src="/assets/flag-standalone.svg" className="h-8"/>
+      <Link href="/" passHref>
+        <a>
+          <img src="/assets/flag-standalone.svg" className="h-8"/>
+        </a>
+      </Link>
     </footer>
   );
 }
