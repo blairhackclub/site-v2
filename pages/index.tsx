@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
 export default function Home() {
   return <>
     <Head>
@@ -8,49 +11,34 @@ export default function Home() {
       {/* <meta name="description" content="by @linkai101 on github" /> */}
     </Head>
 
-    <div className="fixed top-0 inset-x-0 z-30">
-      <nav className="py-4 container max-w-6xl flex justify-center relative gap-12">
-        <img src="/assets/flag-orpheus-top.svg" alt="Hack Club banner" className="h-20 absolute left-3 -top-3"/>
-        <div className="px-4 py-2 flex justify-center items-center gap-6 text-sm font-bold uppercase bg-theme-background/50 rounded-full">
-          <a className="cursor-pointer" href="" rel="noopener noreferrer">
-            Discord
-          </a>
-          <a className="cursor-pointer" href="https://blairhackclub.notion.site">
-            Notion
-          </a>
-          <Link href="/scrapbook" passHref>
-            <a className="cursor-pointer">
-              Scrapbook
-            </a>
-          </Link>
-        </div>
-      </nav>
-    </div>
+    <Navbar/>
 
     <header className="bg-[url('https://shshacks.io/img/one.0f68e0ab.jpg')] bg-cover bg-center bg-theme-background/50 bg-blend-darken">
-      <div className="px-8 pt-28 pb-14 flex flex-col items-center backdrop-blur-[2px]">
-        <h1 className="text-3xl sm:text-5xl font-extrabold whitespace-nowrap leading-tight text-center">
+      <div className="px-8 pt-28 pb-14 flex flex-col items-center gap-8 backdrop-blur-[2px]">
+        <h1 className="text-2xl sm:text-5xl font-extrabold leading-tight text-center">
           Don't learn to code alone.<br/>
-          Join <span className="px-2 bg-theme-surface/75 text-theme-primary rounded-xl">Blair Hack Club</span>.
+          Join <span className="px-2 bg-theme-surface/75 text-theme-primary whitespace-nowrap rounded-xl">Blair Hack Club</span>.
         </h1>
-        <p className="max-w-2xl text-md sm:text-lg text-center mt-4">
+        <p className="max-w-2xl text-md sm:text-lg text-center">
           A non-competitive community of creative coders and makers at Montgomery Blair HS. <span className="font-bold">Join us — beginners welcome!</span>
         </p>
 
-        <p className="text-center mt-8">
-          We meet <u>Wednesdays during lunch</u> in <b>room 314</b>.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-2">
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <button className="px-5 py-1 sm:py-2 bg-amber-500/60 rounded-full text-lg font-bold uppercase transition duration-150 hover:scale-105">
-              Sign up
-            </button>
-          </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <button className="px-5 py-1 sm:py-2 bg-blue-500/60 rounded-full text-lg font-bold uppercase transition duration-150 hover:scale-105">
-              Join the Discord
-            </button>
-          </a>
+        <div>
+          <p className="text-center">
+            We meet <u>Wednesdays during lunch</u> in <b>room 314</b>.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-2">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <button className="px-5 py-1 sm:py-2 bg-amber-500/60 rounded-full text-lg font-bold uppercase transition duration-150 hover:scale-105">
+                Sign up
+              </button>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <button className="px-5 py-1 sm:py-2 bg-blue-500/60 rounded-full text-lg font-bold uppercase transition duration-150 hover:scale-105">
+                Join the Discord
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -128,11 +116,6 @@ export default function Home() {
       </section>
     </main>
 
-    <footer className="p-4 container max-w-6xl flex justify-between items-center gap-8">
-      <p className="text-sm">
-        © 2021-2022 Blair Hack Club.
-      </p>
-      <img src="/assets/flag-standalone.svg" className="h-8"/>
-    </footer>
+    <Footer/>
   </>;
 }
