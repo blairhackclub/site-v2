@@ -12,7 +12,10 @@ export default function Navbar(props) {
         <nav className="py-4 container max-w-6xl flex justify-center relative gap-12">
           <Link href="/" passHref>
             <a>
-              <img src="/assets/flag-orpheus-top.svg" alt="Hack Club banner" className="h-20 absolute left-3 -top-3"/>
+              <picture>
+                <source srcSet="/assets/flag-orpheus-top.svg" type="image/svg+xml" />
+                <img src="/assets/flag-orpheus-top.svg" alt="Hack Club banner" className="h-20 absolute left-3 -top-3"/>
+              </picture>
             </a>
           </Link>
           <div className="px-4 py-2 flex justify-center items-center gap-6 text-sm font-bold uppercase bg-theme-background/50 rounded-full">
@@ -35,11 +38,14 @@ export default function Navbar(props) {
         <nav className="px-4 py-6 container max-w-6xl flex justify-end relative gap-12">
           <Link href="/" passHref>
             <a>
-              <img
-                src="/assets/flag-orpheus-top.svg"
-                alt="Hack Club banner"
-                className="h-20 absolute left-3 -top-3"
-              />
+              <picture>
+                <source srcSet="/assets/flag-orpheus-top.svg" type="image/svg+xml" />
+                <img
+                  src="/assets/flag-orpheus-top.svg"
+                  alt="Hack Club banner"
+                  className="h-20 absolute left-3 -top-3"
+                />
+              </picture>
             </a>
           </Link>
           <div className="flex justify-center items-center gap-5 text-sm font-bold uppercase">

@@ -40,7 +40,7 @@ export default function ScrapbookPage() {
 
     <header className="px-8 pt-28 pb-14 flex flex-col items-center">
       <h1 className="text-3xl sm:text-5xl text-amber-400 font-extrabold font-fancy italic leading-tight text-center">
-        Blair Hack Club's Scrapbook
+        Blair Hack Club&apos;s Scrapbook
       </h1>
       <p className='text-lg text-center mt-2'>
         A daily diary of what Hack Clubbers at Blair HS are learning &amp; making every day.
@@ -56,12 +56,15 @@ export default function ScrapbookPage() {
       {latestScraps.map(scrap =>
         <div className="p-4 flex flex-col gap-3 bg-theme-surface rounded-xl" key={scrap.id}>
           <div className="flex items-center gap-4">
-            <img
-              className="w-12 h-12 rounded-full"
-              src={scrap.fields["Avatar (from User)"]?.[0].url}
-              // src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.full.url}
-              alt={`Avatar of ${scrap.fields["Username (from User)"]}`}
-            />
+            <picture>
+              <source srcSet={scrap.fields["Avatar (from User)"]?.[0].url} type={scrap.fields["Avatar (from User)"]?.[0].type} />
+              <img
+                className="w-12 h-12 rounded-full"
+                src={scrap.fields["Avatar (from User)"]?.[0].url}
+                // src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.full.url}
+                alt={`Avatar of ${scrap.fields["Username (from User)"]}`}
+              />
+            </picture>
             <div>
               <h3 className="font-bold leading-5">
                 <Link href={`/scrapbook/${scrap.fields["Username (from User)"]}`} passHref>

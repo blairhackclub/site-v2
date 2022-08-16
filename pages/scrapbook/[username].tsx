@@ -21,7 +21,7 @@ export default function ScrapbookUserPage() {
   React.useEffect(() => {
     if (!username) return;
     fetchUser();
-  }, [username]);
+  }, [username, fetchUser]);
 
   async function fetchUser() {
     await base('Users').select({
@@ -101,11 +101,14 @@ export default function ScrapbookUserPage() {
 
       <div className="flex gap-8">
         <div className="flex flex-col gap-2">
-          <img
-            className="w-24 h-24 rounded-full"
-            src={user.fields["Avatar"]?.[0].thumbnails.large.url}
-            alt={`Avatar of @${username}`}
-          />
+          <picture>
+            <source srcSet={user.fields["Avatar"]?.[0].thumbnails.large.url} type={user.fields["Avatar"]?.[0].type} />
+            <img
+              className="w-24 h-24 rounded-full"
+              src={user.fields["Avatar"]?.[0].thumbnails.large.url}
+              alt={`Avatar of @${username}`}
+            />
+          </picture>
           <div className="flex items-end gap-3">
             <h2 className="text-4xl font-fancy">
               {user.fields["Username"]}
@@ -123,7 +126,10 @@ export default function ScrapbookUserPage() {
             {user.fields["Discord UID"] &&
               <a href={`https://discordapp.com/users/${user.fields["Discord UID"]}`} target="_blank" rel="noopener noreferrer">
                 <button className="p-1.5 rounded-full hover:bg-theme-surface/60">
-                  <img src="/assets/discord-logo.svg" alt="Discord logo" width={20}/>
+                  <picture>
+                    <source srcSet="/assets/discord-logo.svg" type="image/svg+xml" />
+                    <img src="/assets/discord-logo.svg" alt="Discord logo" width={20}/>
+                  </picture>
                 </button>
               </a>
             }
@@ -168,12 +174,17 @@ export default function ScrapbookUserPage() {
             <div className={`grid ${scrap.fields["Attachments"]?.length > 1 && "grid-cols-2"} gap-4 items-center`}>
               {scrap.fields["Attachments"]?.map((attachment: any) => {
                 if (["image/png", "image/jpeg", "image/svg+xml"].includes(attachment.type))
-                return <img
-                className="rounded-xl"
-                src={attachment.url}
-                alt=""
-                key={attachment.id}
-                />;
+                return <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                  <picture>
+                    <source srcSet={attachment.url} type={attachment.type} />
+                    <img
+                      className="rounded-xl"
+                      src={attachment.url}
+                      alt={attachment.filename}
+                      key={attachment.id}
+                      />
+                  </picture>
+                </a>;
                 // TODO: add support for other file types
                 return <span // unsupported file type
                 className="text-sm text-neutral-400 italic"
