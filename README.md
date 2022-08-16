@@ -1,1 +1,1 @@
-# next-tailwind-starter
+# Blair Hack Club v2 Site

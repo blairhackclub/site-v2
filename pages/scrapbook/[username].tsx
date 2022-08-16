@@ -30,6 +30,7 @@ export default function ScrapbookUserPage() {
       filterByFormula: `{Username} = "${username}"`
     }).firstPage(async (err, records) => {
       if (err) { console.error(err); return; }
+      if (records.length === 0) { console.error("User not found"); return; }
       setUser(records[0]);
 
       // fetch scraps

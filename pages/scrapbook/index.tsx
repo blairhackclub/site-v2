@@ -58,9 +58,10 @@ export default function ScrapbookPage() {
           <div className="flex items-center gap-4">
             <img
               className="w-12 h-12 rounded-full"
-              src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.large.url}
+              src={scrap.fields["Avatar (from User)"]?.[0].url}
+              // src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.full.url}
               alt={`Avatar of ${scrap.fields["Username (from User)"]}`}
-              />
+            />
             <div>
               <h3 className="font-bold leading-5">
                 <Link href={`/scrapbook/${scrap.fields["Username (from User)"]}`} passHref>
@@ -83,12 +84,14 @@ export default function ScrapbookPage() {
             <div className={`grid ${scrap.fields["Attachments"]?.length > 1 && "grid-cols-2"} gap-4 items-center`}>
               {scrap.fields["Attachments"]?.map((attachment: any) => {
                 if (["image/png", "image/jpeg", "image/svg+xml"].includes(attachment.type))
-                return <img
-                  className="rounded-xl"
-                  src={attachment.url}
-                  alt={attachment.filename}
-                  key={attachment.id}
-                />;
+                return <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="rounded-xl"
+                    src={attachment.url}
+                    alt={attachment.filename}
+                    key={attachment.id}
+                  />
+                </a>;
                 // TODO: add support for other file types
                 return <span // unsupported file type
                 className="text-sm text-neutral-400 italic"
