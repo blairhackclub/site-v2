@@ -9,10 +9,7 @@ export default function Footer() {
       </p>
       <Link href="/" passHref>
         <a>
-        <picture>
-          <source srcSet="/assets/flag-standalone.svg" type="image/svg+xml" />
-          <img src="/assets/flag-standalone.svg" className="h-8" alt="Hack Club banner"/>
-        </picture>
+          <img src="/assets/flag-standalone.svg" className="h-8"/>
         </a>
       </Link>
     </footer>

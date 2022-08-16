@@ -12,10 +12,7 @@ export default function Navbar(props) {
         <nav className="py-4 container max-w-6xl flex justify-center relative gap-12">
           <Link href="/" passHref>
             <a>
-              <picture>
-                <source srcSet="/assets/flag-orpheus-top.svg" type="image/svg+xml" />
-                <img src="/assets/flag-orpheus-top.svg" alt="Hack Club banner" className="h-20 absolute left-3 -top-3"/>
-              </picture>
+              <img src="/assets/flag-orpheus-top.svg" alt="Hack Club banner" className="h-20 absolute left-3 -top-3"/>
             </a>
           </Link>
           <div className="px-4 py-2 flex justify-center items-center gap-6 text-sm font-bold uppercase bg-theme-background/50 rounded-full">
@@ -38,14 +35,11 @@ export default function Navbar(props) {
         <nav className="px-4 py-6 container max-w-6xl flex justify-end relative gap-12">
           <Link href="/" passHref>
             <a>
-              <picture>
-                <source srcSet="/assets/flag-orpheus-top.svg" type="image/svg+xml" />
-                <img
-                  src="/assets/flag-orpheus-top.svg"
-                  alt="Hack Club banner"
-                  className="h-20 absolute left-3 -top-3"
-                />
-              </picture>
+              <img
+                src="/assets/flag-orpheus-top.svg"
+                alt="Hack Club banner"
+                className="h-20 absolute left-3 -top-3"
+              />
             </a>
           </Link>
           <div className="flex justify-center items-center gap-5 text-sm font-bold uppercase">
@@ -57,7 +51,7 @@ export default function Navbar(props) {
             <a className="text-neutral-400/60 hover:text-inherit cursor-pointer transition duration-150 hover:scale-105" href="https://github.com/blairhackclub/site-v2" target="_blank" rel="noopener noreferrer">
               <GitHub size={20}/>
             </a>
-            <a className="cursor-pointer" href="" target="_blank" rel="noopener noreferrer">
+            <a className="cursor-pointer" href="https://bhc.page.link/scrapbookchannel" target="_blank" rel="noopener noreferrer">
               <button className="px-3 py-1 bg-neutral-400/60 hover:bg-amber-400/80 text-theme-background rounded-full font-black uppercase transition duration-150 hover:scale-105">
                 Post
               </button>

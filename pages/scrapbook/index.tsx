@@ -56,15 +56,12 @@ export default function ScrapbookPage() {
       {latestScraps.map(scrap =>
         <div className="p-4 flex flex-col gap-3 bg-theme-surface rounded-xl" key={scrap.id}>
           <div className="flex items-center gap-4">
-            <picture>
-              <source srcSet={scrap.fields["Avatar (from User)"]?.[0].url} type={scrap.fields["Avatar (from User)"]?.[0].type} />
-              <img
-                className="w-12 h-12 rounded-full"
-                src={scrap.fields["Avatar (from User)"]?.[0].url}
-                // src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.full.url}
-                alt={`Avatar of ${scrap.fields["Username (from User)"]}`}
-              />
-            </picture>
+            <img
+              className="w-12 h-12 rounded-full"
+              src={scrap.fields["Avatar (from User)"]?.[0].url}
+              // src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.full.url}
+              alt={`Avatar of ${scrap.fields["Username (from User)"]}`}
+            />
             <div>
               <h3 className="font-bold leading-5">
                 <Link href={`/scrapbook/${scrap.fields["Username (from User)"]}`} passHref>

@@ -13,7 +13,7 @@ export default function Home() {
 
     <Navbar/>
 
-    <header className="bg-[url('https://shshacks.io/img/one.0f68e0ab.jpg')] bg-cover bg-center bg-theme-background/50 bg-blend-darken">
+    <header className="bg-[url('/assets/blair-hall-banner.png')] bg-cover bg-center bg-theme-background/50 bg-blend-darken">
       <div className="px-8 pt-28 pb-14 flex flex-col items-center gap-8 backdrop-blur-[2px]">
         <h1 className="text-2xl sm:text-5xl font-extrabold leading-tight text-center">
           Don&apos;t learn to code alone.<br/>
@@ -25,7 +25,7 @@ export default function Home() {
 
         <div>
           <p className="text-center">
-            We meet <u>Wednesdays during lunch</u> in <b>room 314</b>.
+            We meet <u>&#123;TBD&#125; during lunch</u> in <b>room 314</b>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-2">
             <a href="" target="_blank" rel="noopener noreferrer">
@@ -63,7 +63,7 @@ export default function Home() {
             Workshops, scrapbook, more!
           </h3>
           <p className="mt-2">
-            We&apos;re completely reimagining our club this year. We&apos;ll be hosting talks and workshops exploring various coding and tech concepts. Also, we&apos;re introducing our own scrapbook, where hack clubbers can share what their learning and making every day.
+            We&apos;re completely reimagining our club this year. We&apos;ll be hosting talks and workshops exploring various coding and tech concepts. Also, we&apos;re introducing our own scrapbook, where hack clubbers can share what they&apos;re learning and making every day.
           </p>
         </div>
       </section>
@@ -98,10 +98,7 @@ export default function Home() {
 
       <section className="p-8 flex gap-8 bg-theme-surface rounded-xl">
         <div>
-          <picture>
-            <source srcSet="https://blairhacks.com/assets/logo.png" type="image/png" />
-            <img src="https://blairhacks.com/assets/logo.png" className="w-24" alt="BlairHacks logo"/>
-          </picture>
+          <img src="https://blairhacks.com/assets/logo.png" className="w-24" alt="BlairHacks logo"/>
         </div>
         <div className="flex-1">
           <h2 className="text-3xl font-bold leading-8">
