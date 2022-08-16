@@ -47,8 +47,9 @@ export default function Home() {
       <section className="flex flex-col md:flex-row gap-12 md:gap-20">
         <div>
           <iframe
-            className="w-full md:w-96 aspect-video rounded-xl"
-            src="https://www.youtube-nocookie.com/embed/2lBfk9bmwyY" 
+            className="w-full md:w-96 aspect-video rounded-xl bg-theme-surface"
+            // className="w-full md:w-96 aspect-video rounded-xl"
+            src="" 
             title="Blair Hack Club Promo Video 2022-23" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
