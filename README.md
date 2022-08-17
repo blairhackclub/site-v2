@@ -24,8 +24,8 @@ This site integrates with an Airtable base to read data. The base should have th
   - `Record ID`: Formula, `RECORD_ID()` (optional)
   - `Discord ID`: Single line text
   - `Avatar`: Attachment,
-  - `GitHub User`: Single line text (not implemented yet)
-  - `Website`: Single line text (not implemented yet)
+  - `GitHub User`: Single line text
+  - `Website`: Single line text
   - `Scraps`: Link to Scraps, Allow linking to multiple records
   - `Mentions`: Link to scraps, Allow linking to multiple records (not implemented yet)
 

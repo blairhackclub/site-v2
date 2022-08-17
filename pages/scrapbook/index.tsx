@@ -79,20 +79,38 @@ export default function ScrapbookPage() {
           <div className="flex flex-col gap-4">
             <p className="text-sm">
               {scrap.fields["Description"]}
+              {/* TODO: add support for links, mentions, and youtube videos */}
             </p>
 
             <div className={`grid ${scrap.fields["Attachments"]?.length > 1 && "grid-cols-2"} gap-4 items-center`}>
               {scrap.fields["Attachments"]?.map((attachment: any) => {
-                if (["image/png", "image/jpeg", "image/svg+xml"].includes(attachment.type))
-                return <a href={attachment.url} target="_blank" rel="noopener noreferrer">
-                  <img
+                if (["image/png", "image/jpeg", "image/svg+xml", "image/gif"].includes(attachment.type))
+                  return <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                    <img
+                      className="rounded-xl"
+                      src={attachment.url}
+                      alt={attachment.filename}
+                      key={attachment.id}
+                    />
+                  </a>;
+                else if (attachment.type === "video/mp4")
+                  return <video
                     className="rounded-xl"
                     src={attachment.url}
-                    alt={attachment.filename}
+                    controls
+                    onMouseOver={e => { const target = e.target as HTMLVideoElement; target.play() }}
+                    onMouseOut={e => { const target = e.target as HTMLVideoElement; target.pause() }}
                     key={attachment.id}
-                  />
-                </a>;
-                // TODO: add support for other file types
+                  />;
+                else if (["audio/mpeg", "audio/ogg", "audio/wav"].includes(attachment.type))
+                  return <audio
+                    className="w-full sm:w-[133.34%] h-10 sm:scale-75 sm:origin-left"
+                    src={attachment.url}
+                    controls
+                    key={attachment.id}
+                  />;
+                // TODO: add support for more file types
+                // TODO: add youtube video embed support
                 return <span // unsupported file type
                 className="text-sm text-neutral-400 italic"
                 key={attachment.id}
