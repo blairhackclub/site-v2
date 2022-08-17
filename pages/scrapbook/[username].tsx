@@ -102,7 +102,7 @@ export default function ScrapbookUserPage() {
       <div className="flex gap-8">
         <div className="flex flex-col gap-2">
           <img
-            className="w-24 h-24 rounded-full"
+            className="w-24 h-24 object-cover object-center rounded-full"
             src={user.fields["Avatar"]?.[0].thumbnails.large.url}
             alt={`Avatar of @${username}`}
           />
@@ -168,12 +168,14 @@ export default function ScrapbookUserPage() {
             <div className={`grid ${scrap.fields["Attachments"]?.length > 1 && "grid-cols-2"} gap-4 items-center`}>
               {scrap.fields["Attachments"]?.map((attachment: any) => {
                 if (["image/png", "image/jpeg", "image/svg+xml"].includes(attachment.type))
-                return <img
-                className="rounded-xl"
-                src={attachment.url}
-                alt=""
-                key={attachment.id}
-                />;
+                return <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="rounded-xl"
+                    src={attachment.url}
+                    alt=""
+                    key={attachment.id}
+                  />
+                </a>;
                 // TODO: add support for other file types
                 return <span // unsupported file type
                 className="text-sm text-neutral-400 italic"

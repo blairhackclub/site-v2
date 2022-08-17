@@ -57,7 +57,7 @@ export default function ScrapbookPage() {
         <div className="p-4 flex flex-col gap-3 bg-theme-surface rounded-xl" key={scrap.id}>
           <div className="flex items-center gap-4">
             <img
-              className="w-12 h-12 rounded-full"
+              className="w-12 h-12 object-cover object-center rounded-full"
               src={scrap.fields["Avatar (from User)"]?.[0].url}
               // src={scrap.fields["Avatar (from User)"]?.[0].thumbnails.full.url}
               alt={`Avatar of ${scrap.fields["Username (from User)"]}`}
