@@ -79,7 +79,7 @@ export default function ScrapbookPage() {
           <div className="flex flex-col gap-4">
             <p className="text-sm">
               {scrap.fields["Description"]}
-              {/* TODO: add support for links, mentions, and youtube videos */}
+              {/* TODO: add support for text formatting, links, and mentions */}
             </p>
 
             <div className={`grid ${scrap.fields["Attachments"]?.length > 1 && "grid-cols-2"} gap-4 items-center`}>
