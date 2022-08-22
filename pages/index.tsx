@@ -28,12 +28,12 @@ export default function Home() {
             We meet <u>&#123;TBD&#125; during lunch</u> in <b>room 314</b>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-2">
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="https://bhc.page.link/signupform" target="_blank" rel="noopener noreferrer">
               <button className="px-5 py-1 sm:py-2 bg-amber-500/60 rounded-full text-lg font-bold uppercase transition duration-150 hover:scale-105">
                 Sign up
               </button>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="https://bhc.page.link/discord" target="_blank" rel="noopener noreferrer">
               <button className="px-5 py-1 sm:py-2 bg-blue-500/60 rounded-full text-lg font-bold uppercase transition duration-150 hover:scale-105">
                 Join the Discord
               </button>
@@ -44,11 +44,10 @@ export default function Home() {
     </header>
 
     <main className="container max-w-5xl px-8 py-12 flex flex-col gap-24">
-      <section className="flex flex-col md:flex-row gap-12 md:gap-20">
+      {/* <section className="flex flex-col md:flex-row gap-12 md:gap-20">
         <div>
           <iframe
-            className="w-full md:w-96 aspect-video rounded-xl bg-theme-surface"
-            // className="w-full md:w-96 aspect-video rounded-xl"
+            className="w-full md:w-96 aspect-video rounded-xl"
             src="" 
             title="Blair Hack Club Promo Video 2022-23" 
             frameBorder="0" 
@@ -60,6 +59,22 @@ export default function Home() {
           <h2 className="text-neutral-400 text-xl font-extrabold uppercase">
             What&apos;s new
           </h2>
+          <h3 className="text-3xl font-bold leading-8 mt-2">
+            Workshops, scrapbook, more!
+          </h3>
+          <p className="mt-2">
+            We&apos;re completely reimagining our club this year. We&apos;ll be hosting talks and workshops exploring various coding and tech concepts. Also, we&apos;re introducing our own scrapbook, where hack clubbers can share what they&apos;re learning and making every day.
+          </p>
+        </div>
+      </section> */}
+
+      <section className="flex flex-col md:flex-row gap-2 md:gap-20">
+        <div>
+          <h2 className="min-w-[9.5rem] text-neutral-400 text-xl font-extrabold uppercase">
+            What&apos;s new
+          </h2>
+        </div>
+        <div className="flex-1">
           <h3 className="text-3xl font-bold leading-8 mt-2">
             Workshops, scrapbook, more!
           </h3>
