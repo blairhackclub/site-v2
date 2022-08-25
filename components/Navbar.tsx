@@ -15,7 +15,7 @@ export default function Navbar(props) {
               <img src="/assets/flag-orpheus-top.svg" alt="Hack Club banner" className="h-20 absolute left-3 -top-3"/>
             </a>
           </Link>
-          <div className="px-4 py-2 flex justify-center items-center gap-6 text-sm font-bold uppercase bg-theme-background/50 rounded-full">
+          <div className="px-4 py-2 flex justify-center items-center gap-6 text-sm font-bold uppercase bg-theme-background/50 rounded-full z-10">
             <a className="cursor-pointer hover:underline underline-offset-2" href="" target="_blank" rel="noopener noreferrer">
               Discord
             </a>
