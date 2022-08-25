@@ -16,7 +16,7 @@ export default function Navbar(props) {
             </a>
           </Link>
           <div className="px-4 py-2 flex justify-center items-center gap-6 text-sm font-bold uppercase bg-theme-background/50 rounded-full z-10">
-            <a className="cursor-pointer hover:underline underline-offset-2" href="" target="_blank" rel="noopener noreferrer">
+            <a className="cursor-pointer hover:underline underline-offset-2" href="https://bhc.page.link/discord" target="_blank" rel="noopener noreferrer">
               Discord
             </a>
             <a className="cursor-pointer hover:underline underline-offset-2" href="https://blairhackclub.notion.site">
