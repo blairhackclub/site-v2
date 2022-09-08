@@ -25,7 +25,7 @@ export default function Home() {
 
         <div>
           <p className="text-center">
-            We meet <u>&#123;TBD&#125; during lunch</u> in <b>room 314</b>.
+            We meet <u>Wednesdays during lunch</u> in <b>room 314</b>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-2">
             <a href="https://bhc.page.link/signupform" target="_blank" rel="noopener noreferrer">
