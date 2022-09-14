@@ -23,7 +23,7 @@ export default function ScrapbookPage() {
       sort: [{ field: 'Created time', direction: 'desc' }]
     }).eachPage((records, fetchNextPage) => {
       setLatestScraps(records);
-      fetchNextPage();
+      //fetchNextPage();
     }, (err) => {
       setLoading(false);
       if (err) { console.error(err); return; }
