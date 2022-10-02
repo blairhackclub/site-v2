@@ -48,7 +48,7 @@ export default function ScrapbookAboutPage() {
                         Let&apos;s create, together.
                     </span>
                 </p>
-                <h2 className="text-3xl mt-4 mb-2 font-semibold">
+                <h2 className="text-3xl mt-12 mb-2 font-bold">
                     Cool, so how do I join?
                 </h2>
                 <p>
@@ -76,7 +76,7 @@ export default function ScrapbookAboutPage() {
                     After sending the message, Scrappy should automatically
                     confirm that your post has been uploaded!
                 </p>
-                <h2 className="text-3xl mt-4 mb-2  font-semibold">
+                <h2 className="text-3xl mt-12 mb-2 font-bold">
                     Scrappy (the Discord bot)
                 </h2>
                 <p>
@@ -104,9 +104,7 @@ export default function ScrapbookAboutPage() {
                         </ul>
                     </details>
                 </p>
-                <h2 className="text-3xl mt-4 mb-2  font-semibold">
-                    Contributing
-                </h2>
+                <h2 className="text-3xl mt-12 mb-2 font-bold">Contributing</h2>
                 <p>
                     Blair Hack Club&apos;s Scrapbook is fully open source on{" "}
                     <a
