@@ -22,7 +22,7 @@ This site integrates with an Airtable base to read data. The base should have th
 - `Users` table
   - `Username`: Single line text
   - `Record ID`: Formula, `RECORD_ID()` (optional)
-  - `Discord ID`: Single line text
+  - `Discord UID`: Single line text
   - `Avatar`: Attachment,
   - `GitHub User`: Single line text
   - `Website`: Single line text
